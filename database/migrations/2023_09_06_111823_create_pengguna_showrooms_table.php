@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pengguna;
 use App\Models\Role;
 use App\Models\Showroom;
 use Illuminate\Database\Migrations\Migration;
@@ -13,12 +14,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengguna', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->string('nama');
-            $table->string('email')->unique();
-            $table->dateTime('verifikasi_email')->nullable();
-            $table->string('password');
+        Schema::create('pengguna_showroom', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(Pengguna::class, 'id_pengguna');
+            $table->foreignIdFor(Showroom::class, 'id_showroom');
+            $table->foreignIdFor(Role::class, 'id_role');
             $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengguna');
+        Schema::dropIfExists('pengguna_showroom');
     }
 };

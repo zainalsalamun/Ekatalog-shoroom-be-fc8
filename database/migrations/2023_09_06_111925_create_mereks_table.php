@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('merek', function (Blueprint $table) {
             $table->uuid('id');
             $table->string('nama');
+            $table->string('image')->nullable();
             $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });

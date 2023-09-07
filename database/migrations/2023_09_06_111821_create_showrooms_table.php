@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('no_hp');
             $table->string('username');
             $table->string('logo');
+            $table->datetime('expired_showroom');
             $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });
