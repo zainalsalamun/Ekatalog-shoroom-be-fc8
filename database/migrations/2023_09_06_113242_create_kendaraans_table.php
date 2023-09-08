@@ -23,21 +23,21 @@ return new class extends Migration
     {
         Schema::create('kendaraans', function (Blueprint $table) {
             $table->uuid('id');
-            $table->foreignIdFor(Showroom::class, 'id_showroom');
-            $table->foreignIdFor(Jenis::class, 'id_jenis');
-            $table->foreignIdFor(Kondisi::class, 'id_kondisi');
-            $table->foreignIdFor(Merek::class, 'id_merek');
-            $table->foreignIdFor(Transmisi::class, 'id_transmisi');
-            $table->foreignIdFor(TipeBodi::class, 'id_tipe_bodi');
-            $table->foreignIdFor(Warna::class, 'id_warna');
-            $table->foreignIdFor(BahanBakar::class, 'id_bahan_bakar');
-            $table->foreignIdFor(TipeRodaPenggerak::class, 'id_tipe_roda_penggerak');
+            $table->uuid('id_showroom');
+            $table->uuid('id_jenis');
+            $table->uuid('id_kondisi');
+            $table->uuid('id_merek');
+            $table->uuid('id_transmisi');
+            $table->uuid('id_tipe_bodi');
+            $table->uuid('id_warna');
+            $table->uuid('id_bahan_bakar');
+            $table->uuid('id_tipe_roda_penggerak');
             $table->unsignedInteger('penumpang');
             $table->unsignedInteger('pintu');
             $table->double('km');
             $table->unsignedInteger('tahun');
             $table->unsignedInteger('harga');
-            $table->foreignIdFor(Pengguna::class, 'id_pengguna');
+            $table->uuid('id_pengguna');
             $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kondisi', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
             $table->string('nama');
             $table->unsignedSmallInteger('stat');
             $table->timestamps();

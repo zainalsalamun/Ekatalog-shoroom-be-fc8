@@ -24,7 +24,7 @@ class BahanBakarSeeder extends Seeder
             'CNG',
             'Lainnya'
         ];
-        foreach($bahan_bakar as $row){
+        foreach ($bahan_bakar as $row) {
             BahanBakar::create([
                 'nama' => $row,
                 'stat' => 1

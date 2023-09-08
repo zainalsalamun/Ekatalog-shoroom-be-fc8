@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\TipeRodaPenggerak;
+use App\Models\Transmisi;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +21,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            BahanBakarSeeder::class,
+            JenisSeeder::class,
+            KondisiSeeder::class,
+            MerekSeeder::class,
+            RoleSeeder::class,
+            TipeBodiSeeder::class,
+            TipeRodaPenggerakSeeder::class,
+            TransmisiSeeder::class,
+            WarnaSeeder::class
+        ]);
     }
 }
