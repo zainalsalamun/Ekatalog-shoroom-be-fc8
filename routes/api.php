@@ -1,10 +1,14 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Models\TipeRodaPenggerak;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\JenisController;
 use App\Http\Controllers\API\KondisiController;
+use App\Http\Controllers\API\TransmisiController;
+use App\Http\Controllers\API\BahanBakarController;
+use App\Http\Controllers\API\TipeRodaPenggerakController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +32,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/user', [AuthController::class, 'user']);
     Route::resource('/jenis', JenisController::class);
     Route::resource('/kondisi', KondisiController::class);
+    Route::resource('/transmisi', TransmisiController::class);
+    Route::resource('/bahan-bakar', BahanBakarController::class);
+    Route::resource('/tipe-roda-penggerak', TipeRodaPenggerakController::class);
 });
