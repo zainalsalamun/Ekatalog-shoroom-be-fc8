@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\API\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\JenisController;
+use App\Http\Controllers\API\KondisiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,6 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/user', [AuthController::class, 'user']);
+    Route::resource('/jenis', JenisController::class);
+    Route::resource('/kondisi', KondisiController::class);
 });

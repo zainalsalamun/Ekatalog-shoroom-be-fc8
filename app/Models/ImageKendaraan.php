@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Jenis extends Model
+class ImageKendaraan extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $table = 'jenis';
+    protected $table = 'image_kendaraan';
     protected $guarded = ['id'];
     protected $dates = ['created_at', 'updated_at'];
 

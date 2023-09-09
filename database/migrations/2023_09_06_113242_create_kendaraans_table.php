@@ -23,6 +23,7 @@ return new class extends Migration
     {
         Schema::create('kendaraans', function (Blueprint $table) {
             $table->uuid('id');
+            $table->uuid('id_user');
             $table->uuid('id_showroom');
             $table->uuid('id_jenis');
             $table->uuid('id_kondisi');
@@ -32,12 +33,12 @@ return new class extends Migration
             $table->uuid('id_warna');
             $table->uuid('id_bahan_bakar');
             $table->uuid('id_tipe_roda_penggerak');
+            $table->string('slug');
             $table->unsignedInteger('penumpang');
             $table->unsignedInteger('pintu');
             $table->double('km');
             $table->unsignedInteger('tahun');
             $table->unsignedInteger('harga');
-            $table->uuid('id_pengguna');
             $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });

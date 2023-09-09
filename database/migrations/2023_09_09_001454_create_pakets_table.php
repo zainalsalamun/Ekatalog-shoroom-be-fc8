@@ -11,16 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('showroom', function (Blueprint $table) {
+        Schema::create('paket', function (Blueprint $table) {
             $table->uuid('id');
-            $table->uuid('id_paket');
+            $table->unsignedInteger('harga');
             $table->string('nama');
-            $table->string('alamat');
-            $table->string('no_hp');
-            $table->string('username');
-            $table->string('logo');
-            $table->datetime('expired_showroom');
-            $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });
     }
@@ -30,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('showroom');
+        Schema::dropIfExists('pakets');
     }
 };

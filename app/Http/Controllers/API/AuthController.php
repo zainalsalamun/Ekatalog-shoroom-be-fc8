@@ -96,6 +96,7 @@ class AuthController extends Controller
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
+            'stat'     => 1,
         ]);
 
         $user->roles()->attach($id_role_owner, ['stat' => 1]);
