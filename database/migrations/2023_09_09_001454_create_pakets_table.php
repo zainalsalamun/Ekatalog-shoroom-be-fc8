@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id');
             $table->unsignedInteger('harga');
             $table->string('nama');
+            $table->unsignedSmallInteger('stat');
             $table->timestamps();
         });
     }

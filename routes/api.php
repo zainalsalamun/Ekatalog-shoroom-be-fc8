@@ -8,6 +8,7 @@ use App\Http\Controllers\API\JenisController;
 use App\Http\Controllers\API\KondisiController;
 use App\Http\Controllers\API\TransmisiController;
 use App\Http\Controllers\API\BahanBakarController;
+use App\Http\Controllers\API\ShowroomController;
 use App\Http\Controllers\API\TipeRodaPenggerakController;
 
 /*
@@ -35,4 +36,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('/transmisi', TransmisiController::class);
     Route::resource('/bahan-bakar', BahanBakarController::class);
     Route::resource('/tipe-roda-penggerak', TipeRodaPenggerakController::class);
+    Route::resource('/showroom', ShowroomController::class);
 });

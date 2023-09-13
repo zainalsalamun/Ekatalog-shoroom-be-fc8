@@ -16,7 +16,7 @@ class AuthController extends Controller
 {
     public function user(Request $request)
     {
-        $user = $request->user();
+        $user = auth()->user();
 
         return response()->json([
             'status'  => true,
