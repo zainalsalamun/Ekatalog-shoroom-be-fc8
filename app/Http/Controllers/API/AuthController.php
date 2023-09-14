@@ -16,7 +16,7 @@ class AuthController extends Controller
 {
     public function user(Request $request)
     {
-        $user = auth()->user();
+        $user = auth()->user()->load('showrooms');
 
         return response()->json([
             'status'  => true,

@@ -33,7 +33,8 @@ return new class extends Migration
             $table->uuid('id_warna');
             $table->uuid('id_bahan_bakar');
             $table->uuid('id_tipe_roda_penggerak');
-            $table->string('slug');
+            $table->string('nama');
+            $table->text('slug');
             $table->unsignedInteger('penumpang');
             $table->unsignedInteger('pintu');
             $table->double('km');

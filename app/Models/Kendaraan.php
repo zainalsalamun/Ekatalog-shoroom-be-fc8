@@ -24,4 +24,9 @@ class Kendaraan extends Model
     {
         return Carbon::parse($value)->format('Y-m-d H:i:s');
     }
+
+    public function images()
+    {
+        return $this->hasMany(ImageKendaraan::class, 'id_kendaraan');
+    }
 }

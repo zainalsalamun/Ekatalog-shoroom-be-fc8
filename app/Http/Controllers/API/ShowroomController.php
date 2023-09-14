@@ -57,7 +57,7 @@ class ShowroomController extends Controller
         }
 
         $showroom = Showroom::create([
-            'id_paket'         => '9a1ee4da-9bbf-4b59-a6d1-0abad7491087',
+            'id_paket'         => '9a1ee4da-9bbf-4b59-a6d1-0abad7491087', // id_paket tipe free
             'nama'             => $request->nama,
             'no_hp'            => $request->no_hp,
             'username'         => $request->username,
